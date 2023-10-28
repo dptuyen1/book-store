@@ -1,0 +1,23 @@
+[
+  {
+    "name": "ONE PIECE - TẬP 79",
+    "image": "/assets/img/cart-1.jpg",
+    "price": "25.000",
+    "discountPrice": "20.000",
+    "quantity": 1
+  },
+  {
+    "name": "NARUTO - TẬP 48",
+    "image": "/assets/img/cart-2.webp",
+    "price": "25.000",
+    "discountPrice": "20.000",
+    "quantity": 2
+  },
+  {
+    "name": "BLEACH - TẬP 70",
+    "image": "/assets/img/cart-3.webp",
+    "price": "25.000",
+    "discountPrice": "20.000",
+    "quantity": 1
+  }
+]

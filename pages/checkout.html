@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/checkout.css" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JavaScript -->
+    <script src="./assets/js/script.js"></script>
+  </head>
+
+  <body class="index">
+    <header class="header">
+      <div class="container">
+        <nav class="header-navbar">
+          <ul class="header-menu">
+            <li class="menu-item">
+              <a href="#" class="menu-item__link pl-0">Hệ thống cửa hàng</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-item__link">Tin tức</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-item__link">Khuyến mãi</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-item__link">Kết nối</a>
+            </li>
+          </ul>
+          <ul class="header-menu">
+            <li class="menu-item show-notification">
+              <a href="#" class="menu-item__link">
+                <i class="fa-solid fa-bell"></i>
+                Thông báo
+              </a>
+
+              <div class="notification">
+                <div class="notification-wrapper">
+                  <div class="notification-messages">
+                    <i class="fa-regular fa-message"></i>
+                    <p class="message__text">Đăng nhập để xem thông báo</p>
+                  </div>
+
+                  <div class="button-wrapper">
+                    <a href="#" class="notification-button btn">Đăng nhập</a>
+                    <a href="#" class="notification-button btn">Đăng ký</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item" onclick="showModal()">
+              <a href="#" class="menu-item__link">Đăng nhập</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-item__link pr-0">Đăng ký</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="header-utils">
+          <a href="/pages/index.html" class="logo-link">
+            <img src="./assets/img/logo.png" alt="Logo" class="logo-img" />
+          </a>
+
+          <div class="header-search">
+            <div class="search-box">
+              <div class="search-wrapper">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Bạn muốn mua gì?"
+                />
+                <div class="search-history"></div>
+              </div>
+
+              <a href="#" class="search-box__btn btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+
+            <div class="searched-list">
+              <a href="#" class="searched-book">One Piece</a>
+              <a href="#" class="searched-book">Guitar cơ bản</a>
+              <a href="#" class="searched-book">Giảm mỡ - Giữ dáng</a>
+              <a href="#" class="searched-book"
+                >Cấu trúc dữ liệu và Giải thuật</a
+              >
+            </div>
+          </div>
+
+          <div class="cart">
+            <p class="cart__title">Giỏ hàng của bạn</p>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p class="cart__quantity">0</p>
+
+            <div class="cart-added">
+              <div class="cart-added__title">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h2 class="title__name">Giỏ hàng <span>(0)</span></h2>
+              </div>
+
+              <div class="cart-full">
+                <div class="cart-stuffs"></div>
+                <a href="javascript:;" class="del-all-cart" onclick="delAll()"
+                  >Xóa tất cả</a
+                >
+                <div class="stuff__checkout">
+                  <div class="checkout__inform">
+                    <p class="checkout__sum">Tổng cộng</p>
+                    <p class="checkout__cash">0đ</p>
+                  </div>
+                  <a href="#" class="checkout-btn btn">Xem giỏ hàng</a>
+                </div>
+              </div>
+
+              <div class="cart-empty">
+                <div class="cart-empty__wrapper">
+                  <img
+                    src="./assets/img/empty-cart.svg"
+                    alt=""
+                    class="cart-empty__img"
+                  />
+                </div>
+
+                <h1 class="cart-empty__title">Chưa có sản phẩm vào</h1>
+              </div>
+            </div>
+          </div>
+
+          <a href="javascript:;" class="menu-icon" onclick="showMenu()">
+            <i class="fa-solid fa-bars"></i>
+            Menu
+          </a>
+        </section>
+
+        <section class="header-category">
+          <div class="category">
+            <h3 class="category__title">
+              <i class="fa-solid fa-bars"></i>
+              DANH MỤC SẢN PHẨM
+            </h3>
+          </div>
+
+          <div class="shortcut"></div>
+        </section>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container">
+        <section class="main-top">
+          <div class="checkout-steps">
+            <h3 class="step__name">
+              <span class="step__order">1</span>
+              Đăng nhập - Đăng ký
+            </h3>
+            <h3 class="step__name prepare">
+              <span class="step__order">2</span>
+              Địa chỉ giao hàng
+            </h3>
+            <h3 class="step__name prepare">
+              <span class="step__order">3</span>
+              Thanh toán và đặt mua
+            </h3>
+          </div>
+
+          <div class="login-box">
+            <h2 class="box__title">ĐĂNG NHẬP</h2>
+          </div>
+
+          <div class="checkout-content">
+            <div class="content content--left">
+              <h3 class="checkout__title">
+                Giỏ hàng <span class="checkout__quantity">(1 sản phẩm)</span>
+              </h3>
+
+              <div class="checkout__stuffs">
+                <div class="checkout__stuff">
+                  <div class="co-stuff-img__wrapper">
+                    <img
+                      src="./assets/img/book-1.jpg"
+                      alt="Book"
+                      class="co-stuff-img"
+                    />
+                  </div>
+
+                  <h3 class="co-stuff__name">
+                    Luyện Giải Bộ Đề Bồi Dưỡng Học Sinh Giỏi Tiếng Anh Lớp 12
+                  </h3>
+
+                  <div class="co-stuff__function">
+                    <div class="co-stuff__price">
+                      <p class="co-og-price">129.000đ</p>
+                      <p class="co-iscount-price">107.070đ</p>
+                    </div>
+
+                    <div class="input__function">
+                      <i class="fa-solid fa-minus function__btn"></i>
+                      <input type="text" class="co-input" value="1" />
+                      <i class="fa-solid fa-plus function__btn"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content--right">
+              <div class="coupon">
+                <div class="coupon__title">
+                  <h2 class="title__name">
+                    <i class="fa-solid fa-tag" style="margin-right: 6px"></i>
+                    Khuyến mãi
+                  </h2>
+
+                  <a href="#" class="title__view-more">
+                    Xem thêm
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </div>
+
+                <div class="coupon-codes">
+                  <div class="coupon-code">
+                    <div class="title__wrapper">
+                      <h2 class="code__title">
+                        TẶNG 2 CUỐN TẬP - ĐƠN HÀNG TỪ 300K CÓ SÁCH GIÁO KHOA
+                      </h2>
+                      <a href="#" class="code__detail">Chi tiết</a>
+                    </div>
+                    <p class="code__message">
+                      Không áp dụng cho phiếu quà tặng
+                    </p>
+
+                    <div class="code-function">
+                      <div class="code-process">
+                        <div class="process-bar"></div>
+                        <p class="process__message">
+                          Mua thêm 1 sản phẩm để nhận mã
+                        </p>
+                        <p class="process__message">1 sản phẩm</p>
+                      </div>
+
+                      <a href="#" class="code-btn btn">Mua thêm</a>
+                    </div>
+                  </div>
+
+                  <div class="coupon-code">
+                    <div class="title__wrapper">
+                      <h2 class="code__title">
+                        TẶNG 2 CUỐN TẬP - ĐƠN HÀNG TỪ 300K CÓ SÁCH GIÁO KHOA
+                      </h2>
+                      <a href="#" class="code__detail">Chi tiết</a>
+                    </div>
+                    <p class="code__message">
+                      Không áp dụng cho phiếu quà tặng
+                    </p>
+
+                    <div class="code-function">
+                      <div class="code-process">
+                        <div class="process-bar"></div>
+                        <p class="process__message">
+                          Mua thêm 1 sản phẩm để nhận mã
+                        </p>
+                        <p class="process__message">1 sản phẩm</p>
+                      </div>
+
+                      <a href="#" class="code-btn btn">Mua thêm</a>
+                    </div>
+                  </div>
+                </div>
+                <h2 class="coupon__message">
+                  Có thể áp dụng đồng thời nhiều mã
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                </h2>
+              </div>
+
+              <div class="pay">
+                <div class="sum">
+                  <p class="sum__title">Tạm tính:</p>
+                  <p class="sum__price">107.070đ</p>
+                </div>
+
+                <div class="total">
+                  <p class="total__title">Thành tiền:</p>
+                  <p class="total__price">107.070đ</p>
+                </div>
+
+                <a href="#" class="total-btn btn">THANH TOÁN</a>
+                <p class="total__message">
+                  Giảm giá trên web chỉ áp dụng cho bán lẻ
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <section class="footer-top">
+          <div class="policy">
+            <img
+              src="./assets/img/policy-1.webp"
+              alt="Policy"
+              class="policy__img"
+            />
+            <h4 class="policy__title">DỊCH VỤ TẬN TÂM</h4>
+          </div>
+
+          <div class="policy">
+            <img
+              src="./assets/img/policy-2.webp"
+              alt="Policy"
+              class="policy__img"
+            />
+            <h4 class="policy__title">SẢN PHẨM ĐA DẠNG</h4>
+          </div>
+
+          <div class="policy">
+            <img
+              src="./assets/img/policy-3.webp"
+              alt="Policy"
+              class="policy__img"
+            />
+            <h4 class="policy__title">VẬN CHUYỂN CHU ĐÁO</h4>
+          </div>
+
+          <div class="policy">
+            <img
+              src="./assets/img/policy-4.webp"
+              alt="Policy"
+              class="policy__img"
+            />
+            <h4 class="policy__title">GIÁ CẢ HỢP LÝ</h4>
+          </div>
+        </section>
+
+        <hr />
+        <section class="footer-main">
+          <div class="about-us">
+            <h5 class="about-us__title">CHĂM SÓC KHÁCH HÀNG</h5>
+            <ul class="about-us__list">
+              <li class="list-item">
+                <a class="list-item__link" href="#">Trung Tâm Trợ Giúp</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Hướng Dẫn Mua Hàng</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Thanh Toán</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Vận Chuyển</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Trả Hàng & Hoàn Tiền</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Chính Sách Bảo Hành</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-us">
+            <h5 class="about-us__title">VỀ CHÚNG TÔI</h5>
+            <ul class="about-us__list">
+              <li class="list-item">
+                <a class="list-item__link" href="#"
+                  >Giới Thiệu Về BOOKSTORE.VN</a
+                >
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Tuyển Dụng</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Điều Khoản BOOKSTORE</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Chính Sách Bảo Mật</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">Flash Sales</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-us">
+            <h5 class="about-us__title">THANH TOÁN</h5>
+
+            <div class="pay-methods">
+              <div class="method">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8"
+                  alt="Pay-Method"
+                  srcset=""
+                  class="pay-method__img"
+                />
+              </div>
+
+              <div class="method">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16"
+                  alt="Pay-Method"
+                  srcset=""
+                  class="pay-method__img"
+                />
+              </div>
+
+              <div class="method">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08"
+                  alt="Pay-Method"
+                  srcset=""
+                  class="pay-method__img"
+                />
+              </div>
+
+              <div class="method">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/9263fa8c83628f5deff55e2a90758b06"
+                  alt="Pay-Method"
+                  srcset=""
+                  class="pay-method__img"
+                />
+              </div>
+
+              <div class="method">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/0217f1d345587aa0a300e69e2195c492"
+                  alt="Pay-Method"
+                  srcset=""
+                  class="pay-method__img"
+                />
+              </div>
+            </div>
+
+            <h5 class="about-us__title" style="margin-top: 20px">
+              ĐƠN VỊ VẬN CHUYỂN
+            </h5>
+
+            <div class="shipping-units">
+              <div class="unit">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/vn-50009109-159200e3e365de418aae52b840f24185"
+                  alt="Shipping-Unit"
+                  srcset=""
+                  class="shipping-unit__img"
+                />
+              </div>
+
+              <div class="unit">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/d10b0ec09f0322f9201a4f3daf378ed2"
+                  alt="Shipping-Unit"
+                  srcset=""
+                  class="shipping-unit__img"
+                />
+              </div>
+
+              <div class="unit">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/77bf96a871418fbc21cc63dd39fb5f15"
+                  alt="Shipping-Unit"
+                  srcset=""
+                  class="shipping-unit__img"
+                />
+              </div>
+
+              <div class="unit">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f"
+                  alt="Shipping-Unit"
+                  srcset=""
+                  class="shipping-unit__img"
+                />
+              </div>
+
+              <div class="unit">
+                <img
+                  src="https://down-vn.img.susercontent.com/file/957f4eec32b963115f952835c779cd2c"
+                  alt="Shipping-Unit"
+                  srcset=""
+                  class="shipping-unit__img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="about-us">
+            <h5 class="about-us__title">THEO DÕI CHÚNG TÔI TẠI</h5>
+            <ul class="about-us__list">
+              <li class="list-item">
+                <a class="list-item__link" href="#">
+                  <i
+                    class="fa-brands fa-facebook fa-xl"
+                    style="margin-right: 6px"
+                  ></i>
+                  Facebook
+                </a>
+              </li>
+              <li class="list-item">
+                <a class="list-item__link" href="#">
+                  <i
+                    class="fa-brands fa-instagram fa-xl"
+                    style="margin-right: 6px; width: 18px"
+                  ></i>
+                  Instagram
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <hr />
+
+        <section class="footer-bottom">
+          <div class="details">
+            <div class="details__address">
+              <p class="home-address">
+                <i
+                  class="fa-solid fa-house"
+                  style="width: 10px; margin-right: 10px"
+                ></i>
+                Địa chỉ: 371 Nguyễn Kiệm, phường 03, quận Gò Vấp, Thành phố Hồ
+                Chí Minh
+              </p>
+              <p class="phone-number">
+                <i
+                  class="fa-solid fa-phone"
+                  style="width: 10px; margin-right: 10px"
+                ></i>
+                Số điện thoại: 0932012306
+              </p>
+              <p class="mail-address">
+                <i
+                  class="fa-solid fa-envelope"
+                  style="width: 10px; margin-right: 10px"
+                ></i>
+                Email: <a href="mailto:" class="mail">dptuyen1@gmail.com</a>
+              </p>
+            </div>
+
+            <div class="details__contact-us">
+              <h2 class="contact-title">
+                ĐĂNG KÝ NHẬN TIN TỪ BOOKSTORE.VN ĐỂ KHÔNG BỎ LỠ NHỮNG ƯU ĐÃI HẤP
+                DẪN
+              </h2>
+              <p class="contact-message">
+                Cập nhật thông tin khuyến mãi nhanh nhất. Hưởng quyền lợi giảm
+                giá riêng biệt
+              </p>
+              <div class="mail-box">
+                <input
+                  type="text"
+                  class="mail-input"
+                  placeholder="Email của bạn..."
+                />
+                <a href="" class="mail-button btn">Gửi</a>
+              </div>
+            </div>
+          </div>
+          <h3 class="footer-bottom__copy-right">
+            2023 &copy; - Bản quyền thuộc về Nostalgia
+          </h3>
+        </section>
+      </div>
+    </footer>
+
+    <div class="util-buttons">
+      <a href="#" class="button">
+        <i class="fa-solid fa-user"></i>
+        <span>Tài khoản</span>
+      </a>
+
+      <a href="#" class="button">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Giỏ hàng</span>
+      </a>
+
+      <a href="/pages/index.html" class="button">
+        <i class="fa-solid fa-house"></i>
+        <span>Trang chủ</span>
+      </a>
+
+      <a href="#" class="button">
+        <i class="fa-brands fa-facebook"></i>
+        <span>Facebook</span>
+      </a>
+
+      <a href="#" class="button">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+
+      <a href="#" class="button" id="go-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+        <span>Go to top</span>
+      </a>
+    </div>
+
+    <div class="modal">
+      <div class="modal-container">
+        <header class="modal-header">
+          <h3 class="header__title">ĐĂNG NHẬP</h3>
+          <p class="header__message">
+            Bạn chưa có tài khoản?
+            <a href="#" class="register-link">Đăng ký</a>
+          </p>
+          <i
+            class="fa-regular fa-circle-xmark close-btn"
+            onclick="closeModal()"
+          ></i>
+        </header>
+
+        <div class="modal-content">
+          <form action="" class="content-form">
+            <label for="" class="form__label">Số điện thoại/Email</label>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Nhập số điện thoại hoặc email của bạn..."
+            />
+            <label for="" class="form__label">Mật khẩu</label>
+            <input
+              type="password"
+              class="form__input"
+              placeholder="Nhập mật khẩu của bạn..."
+            />
+            <span class="form__message">
+              Quên mật khẩu?
+              <a href="#" class="password-link">Nhấn vào đây</a>
+            </span>
+          </form>
+        </div>
+
+        <footer class="modal-footer">
+          <a href="#" class="login-btn btn">Đăng nhập</a>
+        </footer>
+      </div>
+    </div>
+
+    <div class="menu-shortcut">
+      <a href="javascript:;" class="close-menu-icon" onclick="closeMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
+
+      <div class="menu-shortcut__search">
+        <input
+          type="text"
+          class="menu__search-box"
+          placeholder="Tìm sản phẩm..."
+        />
+        <a href="#" class="menu-search-box__btn btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
+      </div>
+
+      <div class="menu-shortcut__sign">
+        <p href="#" class="sign__title">Đăng ký</p>
+        <p href="#" class="sign__title">Đăng nhập</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+[
+  {
+    "name": "Sách Tiếng Việt",
+    "child": [
+      {
+        "name": "Văn Học",
+        "child": [
+          "Tiểu Thuyết",
+          "Truyện Ngắn - Tản Văn",
+          "Light Novel",
+          "Ngôn Tình",
+          "Trinh Thám - Kiếm Hiệp",
+          "Kinh Điển",
+          "Huyền Bí - Giả Tưởng - Kinh Dị",
+          "Phóng Sự - Ký Sự - Phê Bình Văn Học",
+          "Tác Giả - Tác Phẩm",
+          "Truyện Cổ Tích"
+        ]
+      },
+      {
+        "name": "Thiếu Nhi",
+        "child": [
+          "Bách Khoa Tri Thức",
+          "Kiến Thức - Kỹ Năng Sống",
+          "Tô Màu - Luyện Chữ",
+          "Từ Điển Thiếu Nhi"
+        ]
+      },
+      {
+        "name": "Kinh Tế",
+        "child": [
+          "Quản Trị - Lãnh Đạo",
+          "Marketing - Bán Hàng",
+          "Nhân Vật - Bài Học Kinh Doanh",
+          "Phân Tích Kinh Tế",
+          "Khởi Nghiệp - Làm Giàu",
+          "Chứng Khoán - Bất Động Sản - Đầu Tư",
+          "Nhân Sự - Việc Làm"
+        ]
+      },
+      {
+        "name": "Tâm Lý - Kỹ Năng Sống",
+        "child": [
+          "Kỹ Năng Sống",
+          "Tâm Lý",
+          "Rèn Luyện Nhân Cách",
+          "Sách Cho Tuổi Mới Lớn"
+        ]
+      },
+      {
+        "name": "Giáo Khoa - Tham Khảo",
+        "child": ["Cấp 1", "Cấp 2", "Cấp 3"]
+      },
+      {
+        "name": "Sách Học Ngoại Ngữ",
+        "child": [
+          "Tiếng Anh",
+          "Tiếng Nhật",
+          "Tiếng Hoa",
+          "Tiếng Hàn",
+          "Tiếng Pháp"
+        ]
+      },
+      {
+        "name": "Chính Trị - Pháp Lý - Triết Học"
+      },
+      {
+        "name": "Văn Hoá - Nghệ Thuật - Du Lịch"
+      },
+      {
+        "name": "Từ Điển"
+      },
+      {
+        "name": "Âm Nhạc - Mỹ Thuật - Thời Trang"
+      },
+      {
+        "name": "Thể Dục Thể Thao - Sức Khỏe Đời Sống"
+      }
+    ]
+  },
+  {
+    "name": "Sách Ngoại Văn",
+    "child": [
+      {
+        "name": "Art & Photography",
+        "child": [
+          "Prada Catwalk: The Complete Collections",
+          "Christian Dior: The Spirit of Perfumes",
+          "Fashion, New Edition: The Definitive Visual Guide",
+          "Chanel: Collections and Creations",
+          "Graphic Design For Everyone: Understand the Building Blocks so You can Do It Yourself"
+        ]
+      },
+      {
+        "name": "Biographies & Memoirs"
+      },
+      {
+        "name": "Business & Economics",
+        "child": [
+          "Principles: Life and Work",
+          "Rework: Change The Way You Work Forever",
+          "The Snowball: Warren Buffett And The Business Of Life",
+          "Everybody Lies: What The Internet Can Tell Us About Who We Really Are",
+          "The Daily Drucker: 366 Days of Insight and Motivation for Getting the Right Things Done"
+        ]
+      },
+      {
+        "name": "Children's Books"
+      },
+      {
+        "name": "Dictionary",
+        "child": [
+          "English Vocabulary in Use: Elementary Book with Answers Reprint Edition: Vocabulary Reference and Practice",
+          "English Grammar in Use Book w Ans",
+          "Everything You Need To Ace Geometry Big Fat Notebooks",
+          "English Vocabulary in Use: Pre-Intermediate and Intermediate Book with Answers: Vocabulary Reference and Practice",
+          "Cambridge English Movers 1 for Revised Exam from 2018 Student's Book"
+        ]
+      },
+      {
+        "name": "Education - Teaching"
+      },
+      {
+        "name": "Parenting & Relationships"
+      },
+      {
+        "name": "Science - Technology",
+        "child": [
+          "Everything you need to ace Maths",
+          "Everything You Need To Ace Math and Science",
+          "Everything you need to ace Biology & Chemistry",
+          "Everything You Need To Ace Pre-algebra And Algebra-1",
+          "Everything you need to ace Geometry"
+        ]
+      },
+      {
+        "name": "Parenting & Relationships"
+      },
+      {
+        "name": "Travel & Holiday"
+      },
+      {
+        "name": "Cookbooks, Food & Wine",
+        "child": [
+          "World Whiskey",
+          "Keto Meal Prep Cookbook For Beginners: 600 Easy, Simple & Basic Ketogenic Diet Recipes",
+          "Mediterranean Instant Pot Cookbook: 550 Quick and Healthy Instant Pot Recipes",
+          "Supernatural: The Official Cookbook: Burgers, Pies And Other",
+          "Salt, Fat, Acid, Heat: Mastering the Elements of Good Cooking"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Truyện Tranh",
+    "child": [
+      {
+        "name": "Hành Động",
+        "child": [
+          "One Piece",
+          "Naruto",
+          "Bleach",
+          "Fairy Tail",
+          "Attack On Titan"
+        ]
+      },
+      {
+        "name": "Phiêu Lưu",
+        "child": [
+          "One Punch Man",
+          "Nanatsu No Taizai",
+          "Boku wa Hero",
+          "Dr.Stone",
+          "Toriko",
+          "Hunter X Hunter"
+        ]
+      },
+      {
+        "name": "Hài Hước",
+        "child": [
+          "Gintama",
+          "Beelzebub",
+          "Tokyo Ghoul:Re",
+          "Gantz",
+          "Sakamoto Days"
+        ]
+      },
+      {
+        "name": "Trinh Thám"
+      },
+      {
+        "name": "Huyền Diệu",
+        "child": [
+          "Sword Art Online",
+          "Thanh Gươm Diệt Quỷ",
+          "Black Clover",
+          "Yu-Gi-Oh!",
+          "Tougen Anki"
+        ]
+      },
+      {
+        "name": "Phép Thuật"
+      },
+      {
+        "name": "Học Đường",
+        "child": ["Tokyo Revengers", "Shokugeki no Soma", "Ansatsu Kyoshitsu"]
+      },
+      {
+        "name": "Khoa Học Viễn Tưởng"
+      },
+      {
+        "name": "Thể Thao",
+        "child": [
+          "Slam Dunk",
+          "Haikyuu",
+          "Kuroko No Basuke",
+          "Grappler Baki",
+          "Kenga Ashura",
+          "Blue Lock"
+        ]
+      },
+      {
+        "name": "Xuyên Không"
+      }
+    ]
+  },
+  {
+    "name": "Văn Phòng Phẩm",
+    "child": [
+      {
+        "name": "Bút - Viết"
+      },
+      {
+        "name": "Dụng Cụ Học Sinh"
+      },
+      {
+        "name": "Sản Phẩm Về Giấy"
+      },
+      {
+        "name": "Dụng Cụ Văn Phòng"
+      },
+      {
+        "name": "Dụng Cụ Vẽ"
+      },
+      {
+        "name": "Sản Phẩm Điện Tử"
+      }
+    ]
+  },
+  {
+    "name": "Đồ Trang Trí - Lưu Niệm"
+  },
+  {
+    "name": "Văn Phòng Phẩm"
+  },
+  {
+    "name": "Outlet Sales"
+  }
+]

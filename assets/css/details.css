@@ -1,0 +1,154 @@
+.main-top {
+    padding: 20px 0;
+}
+
+.slider-content-left{
+    margin: 0 10px;
+    width: 50%;
+    
+}
+div.slider-content-left img{
+    width: 100%;
+}
+div.item2 >div{
+    width: 25%;
+}
+div.item2{
+    display: flex;
+
+}
+.slider-content{
+    display: flex;
+}
+.slider-content-right{
+    margin: 0 20px;
+    width: 50%;
+}
+
+.slider-content-right > h1 {
+    font-size: 1.8rem;
+}
+
+.suppiler {
+    font-size: 1.4rem;
+}
+
+.ab{
+    display: flex;
+    justify-content: center;
+}
+.xyzt{
+    color : #00ab9f;
+}
+.xyzta{
+    color : #00ab9f;
+    font-size: 20px;
+}
+.font-1{
+    display: inline-block;
+    margin-right: 15px;
+    color: #00ab9f;
+    font-size: 20px;
+    font-weight: bold;
+}
+.font-2{
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: Roboto;
+    color: #333333;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+.font-3{
+    text-decoration: line-through;
+    font-size: 16px;
+    color: #cfcfcf;
+    font-family: Roboto;
+}
+.box2{
+    font-weight: bold;
+    border: 1px solid #b5b5b5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(150, 150, 150, 0.18);
+    padding: 15px;
+    border-radius: 5px;
+    display: flow-root;
+    width: 100%;
+}
+.font4{
+    color: #ff9900;
+}
+.a{
+    
+    padding: 0 10px;
+}
+div.abcd{
+    margin-top: 15%;
+    width: 100%;
+    background-color: bisque;
+}   
+.xyz{
+    color: #ff9900;
+} 
+.box{
+    font-weight: bold;
+    border: 1px solid #ffc214;
+    background-color: rgba(232, 175, 70, 0.18);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.io{
+    font-weight: bold;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 10%;
+    width: 100%;
+    background-color: rgb(211, 204, 204);
+    margin: 0 0 15px 0;
+    
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  button {
+    width: 30px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 5px;
+  }
+  
+  input.quantity {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+  }
+.new-left{
+    font-size: 15px;
+    width: 70%;
+}
+.new-right{
+    padding-right: 20px;
+    width: 30%;
+}
+.slider-content-bottom{
+    display: flex;
+}
+.new-right-content{
+    display: flex;
+}
+    

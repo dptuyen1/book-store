@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiet san pham</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./assets/js/details.js"></script>
+</head>
+
+<body onload="init()">
+    <header class="header">
+        <div class="container">
+            <nav class="header-navbar">
+                <ul class="header-menu">
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link pl-0">Hệ thống cửa hàng</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">Tin tức</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">Khuyến mãi</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-item__link">Kết nối</a>
+                    </li>
+                </ul>
+                <ul class="header-menu">
+                    <li class="menu-item show-notification">
+                        <a href="#" class="menu-item__link">
+                            <i class="fa-solid fa-bell"></i>
+                            Thông báo
+                        </a>
+
+                        <div class="notification">
+                            <div class="notification-wrapper">
+                                <div class="notification-messages">
+                                    <i class="fa-regular fa-message"></i>
+                                    <p class="message__text">Đăng nhập để xem thông báo</p>
+                                </div>
+
+                                <div class="button-wrapper">
+                                    <a href="/pages/login.html" class="notification-button btn">Đăng nhập</a>
+                                    <a href="/pages/signup.html" class="notification-button btn">Đăng ký</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item" onclick="showModal()">
+                        <a href="#" class="menu-item__link">Đăng nhập</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/pages/signup.html" class="menu-item__link pr-0">Đăng ký</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="header-utils">
+                <a href="/pages/index.html" class="logo-link">
+                    <img src="./assets/img/logo.png" alt="Logo" class="logo-img" />
+                </a>
+
+                <div class="header-search">
+                    <div class="search-box">
+                        <div class="search-wrapper">
+                            <input type="text" class="search-input" placeholder="Bạn muốn mua gì?" />
+                            <div class="search-history"></div>
+                        </div>
+
+                        <a href="#" class="search-box__btn btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+
+                    <div class="searched-list">
+                        <a href="#" class="searched-book">One Piece</a>
+                        <a href="#" class="searched-book">Guitar cơ bản</a>
+                        <a href="#" class="searched-book">Giảm mỡ - Giữ dáng</a>
+                        <a href="#" class="searched-book">Cấu trúc dữ liệu và Giải thuật</a>
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <p class="cart__title">Giỏ hàng của bạn</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p class="cart__quantity">0</p>
+
+                    <div class="cart-added">
+                        <div class="cart-added__title">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <h2 class="title__name">Giỏ hàng <span>(0)</span></h2>
+                        </div>
+
+                        <div class="cart-full">
+                            <div class="cart-stuffs"></div>
+                            <a href="javascript:;" class="del-all-cart" onclick="delAll()">Xóa tất cả</a>
+                            <div class="stuff__checkout">
+                                <div class="checkout__inform">
+                                    <p class="checkout__sum">Tổng cộng</p>
+                                    <p class="checkout__cash">0đ</p>
+                                </div>
+                                <a href="#" class="checkout-btn btn">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+
+                        <div class="cart-empty">
+                            <div class="cart-empty__wrapper">
+                                <img src="./assets/img/empty-cart.svg" alt="" class="cart-empty__img" />
+                            </div>
+
+                            <h1 class="cart-empty__title">Chưa có sản phẩm vào</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="javascript:;" class="menu-icon" onclick="showMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                    Menu
+                </a>
+            </section>
+
+            <section class="header-category">
+                <div class="category">
+                    <h3 class="category__title">
+                        <i class="fa-solid fa-bars"></i>
+                        DANH MỤC SẢN PHẨM
+                    </h3>
+                </div>
+
+                <div class="shortcut"></div>
+            </section>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="main-top">
+                <section class="slider">
+                    <div class="slider-content">
+                        <div class="slider-content-left">
+
+                            <div class="item1">
+                                <img src="https://product.hstatic.net/1000363117/product/toi_ve_cc_af4a7b96100e49c8a9dbbdd1cfc4178c_master.jpg"
+                                    id="mainImg" alt="phone" />
+                            </div>
+
+                            <div class="item2">
+                                <div><img
+                                        src="https://product.hstatic.net/1000363117/product/2019_09_19_10_47_12_1-390x510_2a7eb569310a422d9274569d59c60892_master.jpg"
+                                        onclick="changeImage(this)" alt="1" /></div>
+
+                                <div><img
+                                        src="https://product.hstatic.net/1000363117/product/2019_09_19_10_47_12_3-390x510_6dae253fb04d4fc692c2dc5aa32a07ff_master.jpg"
+                                        onclick="changeImage(this)" alt="3" /></div>
+                                <div><img
+                                        src="https://product.hstatic.net/1000363117/product/2019_09_19_10_47_12_4-390x510_a46957c77ff94946b0c4951edca22424_master.jpg"
+                                        onclick="changeImage(this)" alt="4" /></div>
+                                <div><img
+                                        src="https://product.hstatic.net/1000363117/product/2019_09_19_10_47_12_2-390x510_ae147bfa9b8e4bf0892751dbf769ba56_master.jpg"
+                                        onclick="changeImage(this)" alt="2" /></div>
+                            </div>
+                        </div>
+                        <div class="slider-content-right">
+                            <h1> TÔI VẼ - PHƯƠNG PHÁP TỰ HỌC VẼ TRUYỆN TRANH</h1>
+                            <p class="suppiler"> Nhà cung cấp: <a href="">Đông A</a> | Loại bìa: <a href="">Bìa mềm</a>
+                                | Mã SP:
+                                893607167204</p>
+                            <p><span class="font-1">80,000đ</span><del class="font-3">100,000đ</del>
+                            <p class="font-2">(Bạn đã tiết kiệm được 20,000đ)</p>
+                            </p>
+                            <div class="box">
+                                <p>Khuyến mãi & Ưu đãi tại <a href="">CACHEP.VN</a> </p>
+                                <p><span class="xyzt">Freeship</span> TP.HCM cho đơn hàng <span class="xyzt">từ
+                                        1.000.000 đồng</span></p>
+                                <p><span class="xyzt">Freeship</span> cho các tỉnh thành ngoài TP.HCM cho đơn hàng <span
+                                        class="xyzt">từ 1.500.000 đồng</span></p>
+
+                            </div>
+                            <p>Số Lượng</p>
+                            <div class="quantity">
+                                <button class="minus-btn" id="minus">-</button>
+                                <input class="quantity" type="text" id="quantity" value="1">
+                                <button class="plus-btn" id="plus">+</button>
+                            </div>
+                            <p class="box2">Gọi đặt mua <span class="font4">(024) 3994 7159</span> (Thứ 2 - thứ 6 |
+                                08:00 - 17.00)</p>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <div class="slider-content-bottom">
+                    <div class="new-left">
+                        <h1 style="font-size: 23px;">Tôi Vẽ - Phương Pháp Tự Học Vẽ Truyện Tranh</h1>
+
+                        <p>“Tôi vẽ với 300 trang sách bao gồm những kỹ năng cơ bản cần có của một họa sĩ truyện tranh,
+                            từ
+                            tạo hình nhân vật, thiết kế bối cảnh, biểu cảm, các kỹ thuật diễn họa cho đến luật phối
+                            cảnh.
+                            Đây là một cuốn cẩm nang tuyệt vời dành cho các bạn đang bắt đầu học vẽ truyện tranh. Những
+                            kiến
+                            thức này có thể không giúp các bạn vẽ đẹp ngay lập tức nhưng sẽ là nền tảng vững chắc giúp
+                            bạn
+                            hình thành các tiêu chuẩn chuyên nghiệp trong nghề và không mất thời gian tự mò mẫm. Phần
+                            minh
+                            họa cho các bài học cũng rất hấp dẫn và sáng tạo. Các tác giả đã sử dụng chính nhân vật và
+                            trang
+                            truyện của mình để làm rõ sự liên quan giữa lý thuyết và thực tế, tính ứng dụng rõ ràng của
+                            các
+                            kỹ thuật và quy trình sáng tác.</p>
+                        <p>Trên thị trường hiện tại không thiếu những quyển sách dạy vẽ truyện tranh được dịch và biên
+                            tập
+                            lại từ nhiều nguồn nhưng đa số là kiểu sách “cầm tay chỉ việc”, không thật sữ hữu ích với
+                            các
+                            bạn trẻ Việt Nam – những bạn không theo học chuyên ngành mỹ thuật, thiếu kiến thức nền tảng
+                            về
+                            hội họa… Ngược lại, trong quyển Tôi vẽ, mọi phần kiến thức từ lớn đến nhỏ đều được lý giải
+                            và
+                            phân tích khá kỹ kèm ảnh minh họa rõ ràng, giúp người xem hiểu được gốc rễ vấn đề đồng thời
+                            áp
+                            dụng áp dụng vào nhiều “ngữ cảnh” khác nhau trong lúc sáng tác. Hệ thống kiến thức trong
+                            sách
+                            cũng được sắp xếp hợp lý từ thấp đến cao, xen kẽ là những trang truyện và hình minh họa vui
+                            nhộn
+                            làm giảm áp lực cho phần lý thuyết hơi khô cứng như phần phối cảnh và anatony (giải phẫu)”
+                        </p>
+                        <h2>Phan Vũ Linh</h2>
+                        <p>Giảng viên Trường Đại học Mỹ thuật Tp. HCM</p>
+                        <p> Sáng lập Sân Si Studio</p>
+                        <h2>Mục luc</h2>
+                        <p>Chương 1: Hình khối <br>
+
+                            Chương 2: Chân dung<br>
+
+                            Chương 3: Cơ thể người<br>
+
+                            Chương 4: Trang phục<br>
+
+                            Chương 5: Phối cảnh<br>
+
+                            Chương 6: Phần mềm<br>
+
+                            Phụ lục</p>
+                        <h2>Tác giả</h2>
+                        <P>Nguyễn Mỹ Anh (Butaemon) <br>
+
+                            Đào Quang Huy<br>
+
+                            Lê Mạnh Cương (Kei Nhẫn Giả) <br>
+
+                            Nguyễn Ngọc Anh (Kite Nguyễn) <br>
+
+                            Nguyễn Minh Đức <br>
+
+                            Nguyễn Quốc Tùng (Tùng Kận) <br>
+
+                            Trần Xuân Đức (Xiao Đức) <br>
+
+                            Đặng Quang Dũng (Mèo Mốc) <br>
+
+                            Mai Ngọc Ánh (Hen Ai Mei) <br>
+
+                            Nguyễn Vũ Trung Kiên (Kenxfire) <br>
+
+                            Nguyễn Thu Thủy (KenB) <br>
+
+                            Hà Huy Hoàng (Splendid River) <br>
+
+                            Lê Mai Anh (Tuyệt Đỉnh Sinh Vật) <br>
+
+                            Trần Tùng Dương <br>
+
+                            Đặng Thành Tâm (Tidus F air)</P>
+
+                        <h2>Hiệu chỉnh</h2>
+                        <P>
+                            Phan Vũ Linh (Giảng viên Trường Đại học Mỹ thuật TP. HCM) <br>
+
+                            Hoàng Anh Tuấn (Trưởng nhóm B.R.O)
+                        </P>
+                    </div>
+                    <div class ="new-right">
+                        <h1 style="padding-bottom: 30px; font-size: 23px;">SẢN PHẨM LIÊN QUAN</h1>
+                        
+                        
+                        <li class="new-right-content">
+                            <div><img src="https://product.hstatic.net/1000363117/product/8935235230873_b399cdd4f3c045fbb4f8e623fc2e30f9_small.jpg" alt="1"></div>
+                            <div style="font-size: 15px; font-weight: bold;">
+                                <a href="">Nhà ảo thuật đen và Vụ án mạng tại thị trấn không tên</a>
+                                <div style="padding-top: 15px;">
+                                    <span>179,000đ</span>
+                                    <span>
+                                        <s style="color: rgb(148, 147, 145);">199,000đ</s>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-right-content">
+                            <div><img src="https://product.hstatic.net/1000363117/product/52_b54a2b58d8354dcb87e63416edb9cbfb_small.jpg" alt="2"></div>
+                            <div style="font-size: 15px; font-weight: bold;">
+                                <a href="">Bí quyết gầy dựng cơ nghiệp bạc tỷ</a>
+                                <div style="padding-top: 15px;">
+                                    <span>130,000đ</span>
+                                    <span>
+                                        <s style="color: rgb(148, 147, 145);">145,000đ</s>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-right-content">
+                            <div><img src="https://product.hstatic.net/1000363117/product/8935278608202_4e12a1b6bb614cb19065f8e3b1659b9c_small.jpg" alt="3"></div>
+                            <div style="font-size: 15px; font-weight: bold;">
+                                <a href="">Siêu tập trung-Tăng hiệu quả trong một thế giới đa đoạn</a>
+                                <div style="padding-top: 15px;">
+                                    <span>126,000đ</span>
+                                    <span>
+                                        <s style="color: rgb(148, 147, 145);">140,000đ</s>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="new-right-content">
+                            <div><img src="https://product.hstatic.net/1000363117/product/unnamed_5_5_d4c8ca808594426d9970288d3f323d27_small.jpg" alt="4"></div>
+                            <div style="font-size: 15px; font-weight: bold;">
+                                <a href="">Tâm lý học- Think Psychology - Text Book</a>
+                                <div style="padding-top: 15px;">
+                                    <span>405,000đ</span>
+                                    <span>
+                                        <s style="color: rgb(148, 147, 145);">450,000đ</s>
+                                    </span>
+                                </div>
+                            </div>
+                        </li><li class="new-right-content">
+                            <div><img src="https://product.hstatic.net/1000363117/product/unnamed-_1__1_9906d9a3bf8d4315b63d0a97c1152396_small.jpg" alt="5"></div>
+                            <div style="font-size: 15px; font-weight: bold;">
+                                <a href="">Hài nhiều chút cho đời vui hơn</a>
+                                <div style="padding-top: 15px;">
+                                    <span>151,000đ</span>
+                                    <span>
+                                        <s style="color: rgb(148, 147, 145);">168,000đ</s>
+                                    </span>
+                                </div>
+                            </div>
+                        </li><li class="new-right-content">
+                            <div><img src="https://product.hstatic.net/1000363117/product/dinh_gio_hu_-_tai_ban_2023_re_c8de389790844e51b456c925697b0958_small.jpg" alt="6"></div>
+                            <div style="font-size: 15px; font-weight: bold;">
+                                <a href="">Đỉnh gió hú(Bìa mềm)</a>
+                                <div style="padding-top: 15px;">
+                                    <span>80,000đ</span>
+                                    <span>
+                                        <s style="color: rgb(148, 147, 145);">100,000đ</s>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </li><li class="new-right-content">
+                        <div><img src="https://product.hstatic.net/1000363117/product/thumb___logo_1_f9ce3dbe08204c46994c47bf320093c2_small.jpg" alt="7"></div>
+                        <div style="font-size: 15px; font-weight: bold;">
+                            <a href="">Tổng thống K. thứ tư</a>
+                            <div style="padding-top: 15px;">
+                                <span>160,000đ</span>
+                                <span>
+                                    <s style="color: rgb(148, 147, 145);">200,000đ</s>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </li><li class="new-right-content">
+                    <div><img src="https://product.hstatic.net/1000363117/product/35c359fd9202d05dceaa0593031e28ea_6b431c6dfb7c42f098f3fa7810f15e33_small.jpg" alt="8"></div>
+                    <div style="font-size: 15px; font-weight: bold;">
+                        <a href="">Trái tim thông tuệ</a>
+                        <div style="padding-top: 15px;">
+                            <span>220,000đ</span>
+                            <span>
+                                <s style="color: rgb(148, 147, 145);">245,000đ</s>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                        
+                        
+                  
+                               
+                         
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <section class="footer-top">
+                <div class="policy">
+                    <img src="./assets/img/policy-1.webp" alt="Policy" class="policy__img" />
+                    <h4 class="policy__title">DỊCH VỤ TẬN TÂM</h4>
+                </div>
+
+                <div class="policy">
+                    <img src="./assets/img/policy-2.webp" alt="Policy" class="policy__img" />
+                    <h4 class="policy__title">SẢN PHẨM ĐA DẠNG</h4>
+                </div>
+
+                <div class="policy">
+                    <img src="./assets/img/policy-3.webp" alt="Policy" class="policy__img" />
+                    <h4 class="policy__title">VẬN CHUYỂN CHU ĐÁO</h4>
+                </div>
+
+                <div class="policy">
+                    <img src="./assets/img/policy-4.webp" alt="Policy" class="policy__img" />
+                    <h4 class="policy__title">GIÁ CẢ HỢP LÝ</h4>
+                </div>
+            </section>
+
+            <hr />
+            <section class="footer-main">
+                <div class="about-us">
+                    <h5 class="about-us__title">CHĂM SÓC KHÁCH HÀNG</h5>
+                    <ul class="about-us__list">
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Trung Tâm Trợ Giúp</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Hướng Dẫn Mua Hàng</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Thanh Toán</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Vận Chuyển</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Trả Hàng & Hoàn Tiền</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Chính Sách Bảo Hành</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="about-us">
+                    <h5 class="about-us__title">VỀ CHÚNG TÔI</h5>
+                    <ul class="about-us__list">
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Giới Thiệu Về BOOKSTORE.VN</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Tuyển Dụng</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Điều Khoản BOOKSTORE</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Chính Sách Bảo Mật</a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">Flash Sales</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="about-us">
+                    <h5 class="about-us__title">THANH TOÁN</h5>
+
+                    <div class="pay-methods">
+                        <div class="method">
+                            <img src="https://down-vn.img.susercontent.com/file/d4bbea4570b93bfd5fc652ca82a262a8"
+                                alt="Pay-Method" srcset="" class="pay-method__img" />
+                        </div>
+
+                        <div class="method">
+                            <img src="https://down-vn.img.susercontent.com/file/a0a9062ebe19b45c1ae0506f16af5c16"
+                                alt="Pay-Method" srcset="" class="pay-method__img" />
+                        </div>
+
+                        <div class="method">
+                            <img src="https://down-vn.img.susercontent.com/file/38fd98e55806c3b2e4535c4e4a6c4c08"
+                                alt="Pay-Method" srcset="" class="pay-method__img" />
+                        </div>
+
+                        <div class="method">
+                            <img src="https://down-vn.img.susercontent.com/file/9263fa8c83628f5deff55e2a90758b06"
+                                alt="Pay-Method" srcset="" class="pay-method__img" />
+                        </div>
+
+                        <div class="method">
+                            <img src="https://down-vn.img.susercontent.com/file/0217f1d345587aa0a300e69e2195c492"
+                                alt="Pay-Method" srcset="" class="pay-method__img" />
+                        </div>
+                    </div>
+
+                    <h5 class="about-us__title" style="margin-top: 20px">
+                        ĐƠN VỊ VẬN CHUYỂN
+                    </h5>
+
+                    <div class="shipping-units">
+                        <div class="unit">
+                            <img src="https://down-vn.img.susercontent.com/file/vn-50009109-159200e3e365de418aae52b840f24185"
+                                alt="Shipping-Unit" srcset="" class="shipping-unit__img" />
+                        </div>
+
+                        <div class="unit">
+                            <img src="https://down-vn.img.susercontent.com/file/d10b0ec09f0322f9201a4f3daf378ed2"
+                                alt="Shipping-Unit" srcset="" class="shipping-unit__img" />
+                        </div>
+
+                        <div class="unit">
+                            <img src="https://down-vn.img.susercontent.com/file/77bf96a871418fbc21cc63dd39fb5f15"
+                                alt="Shipping-Unit" srcset="" class="shipping-unit__img" />
+                        </div>
+
+                        <div class="unit">
+                            <img src="https://down-vn.img.susercontent.com/file/59270fb2f3fbb7cbc92fca3877edde3f"
+                                alt="Shipping-Unit" srcset="" class="shipping-unit__img" />
+                        </div>
+
+                        <div class="unit">
+                            <img src="https://down-vn.img.susercontent.com/file/957f4eec32b963115f952835c779cd2c"
+                                alt="Shipping-Unit" srcset="" class="shipping-unit__img" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-us">
+                    <h5 class="about-us__title">THEO DÕI CHÚNG TÔI TẠI</h5>
+                    <ul class="about-us__list">
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">
+                                <i class="fa-brands fa-facebook fa-xl" style="margin-right: 6px"></i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="list-item">
+                            <a class="list-item__link" href="#">
+                                <i class="fa-brands fa-instagram fa-xl" style="margin-right: 6px; width: 18px"></i>
+                                Instagram
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr />
+
+            <section class="footer-bottom">
+                <div class="details">
+                    <div class="details__address">
+                        <p class="home-address">
+                            <i class="fa-solid fa-house" style="width: 10px; margin-right: 10px"></i>
+                            Địa chỉ: 371 Nguyễn Kiệm, phường 03, quận Gò Vấp, Thành phố Hồ
+                            Chí Minh
+                        </p>
+                        <p class="phone-number">
+                            <i class="fa-solid fa-phone" style="width: 10px; margin-right: 10px"></i>
+                            Số điện thoại: 0932012306
+                        </p>
+                        <p class="mail-address">
+                            <i class="fa-solid fa-envelope" style="width: 10px; margin-right: 10px"></i>
+                            Email: <a href="mailto:" class="mail">dptuyen1@gmail.com</a>
+                        </p>
+                    </div>
+
+                    <div class="details__contact-us">
+                        <h2 class="contact-title">
+                            ĐĂNG KÝ NHẬN TIN TỪ BOOKSTORE.VN ĐỂ KHÔNG BỎ LỠ NHỮNG ƯU ĐÃI HẤP
+                            DẪN
+                        </h2>
+                        <p class="contact-message">
+                            Cập nhật thông tin khuyến mãi nhanh nhất. Hưởng quyền lợi giảm
+                            giá riêng biệt
+                        </p>
+                        <div class="mail-box">
+                            <input type="text" class="mail-input" placeholder="Email của bạn..." />
+                            <a href="" class="mail-button btn">Gửi</a>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="footer-bottom__copy-right">
+                    2023 &copy; - Bản quyền thuộc về Nostalgia
+                </h3>
+            </section>
+        </div>
+    </footer>
+
+    <div class="util-buttons">
+        <a href="#" class="button">
+            <i class="fa-solid fa-user"></i>
+            <span>Tài khoản</span>
+        </a>
+
+        <a href="#" class="button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Giỏ hàng</span>
+        </a>
+
+        <a href="/pages/index.html" class="button">
+            <i class="fa-solid fa-house"></i>
+            <span>Trang chủ</span>
+        </a>
+
+        <a href="#" class="button">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+        </a>
+
+        <a href="#" class="button">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+
+        <a href="#" class="button" id="go-to-top">
+            <i class="fa-solid fa-chevron-up"></i>
+            <span>Go to top</span>
+        </a>
+    </div>
+
+    <div class="modal">
+        <div class="modal-container">
+            <header class="modal-header">
+                <h3 class="header__title">ĐĂNG NHẬP</h3>
+                <p class="header__message">
+                    Bạn chưa có tài khoản?
+                    <a href="#" class="register-link">Đăng ký</a>
+                </p>
+                <i class="fa-regular fa-circle-xmark close-btn" onclick="closeModal()"></i>
+            </header>
+
+            <div class="modal-content">
+                <form action="" class="content-form">
+                    <label for="" class="form__label">Số điện thoại/Email</label>
+                    <input type="text" class="form__input" placeholder="Nhập số điện thoại hoặc email của bạn..." />
+                    <label for="" class="form__label">Mật khẩu</label>
+                    <input type="password" class="form__input" placeholder="Nhập mật khẩu của bạn..." />
+                    <span class="form__message">
+                        Quên mật khẩu?
+                        <a href="#" class="password-link">Nhấn vào đây</a>
+                    </span>
+                </form>
+            </div>
+
+            <footer class="modal-footer">
+                <a href="#" class="login-btn btn">Đăng nhập</a>
+            </footer>
+        </div>
+    </div>
+
+    <div class="menu-shortcut">
+
+        <div class="container">
+
+        </div>
+</body>
+
+</html>

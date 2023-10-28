@@ -1,0 +1,238 @@
+[
+  {
+    "ads": "/assets/img/ads-1.png",
+    "type": "SÁCH NỔI BẬT",
+    "bookAds": "/assets/img/book-ads-2.jpg",
+    "books": [
+      {
+        "id": 1,
+        "image": "/assets/img/book-9.webp",
+        "name": "TÔI VẼ - PHƯƠNG PHÁP TỰ HỌC VẼ TRUYỆN TRANH",
+        "ogPrice": "100.000",
+        "discountPrice": "80.000",
+        "percentage": "-20%"
+      },
+      {
+        "id": 2,
+        "image": "/assets/img/book-10.webp",
+        "name": "CAN TRƯỜNG BƯỚC TIẾP (TÁI BẢN 2023)",
+        "ogPrice": "96.000",
+        "discountPrice": "86.400",
+        "percentage": "-10%"
+      },
+      {
+        "id": 3,
+        "image": "/assets/img/book-11.webp",
+        "name": "GÁNH GÁNH... GỒNG GỒNG... (XUÂN PHƯỢNG HỒI KÝ)",
+        "ogPrice": "160.000",
+        "discountPrice": "144.000",
+        "percentage": "-10%"
+      },
+      {
+        "id": 4,
+        "image": "/assets/img/book-12.webp",
+        "name": "BÍ QUYẾT HỘI HỌA - LUYỆN VẼ HÌNH KHỐI",
+        "ogPrice": "88.000",
+        "discountPrice": "79.200",
+        "percentage": "-10%"
+      },
+      {
+        "id": 5,
+        "image": "/assets/img/book-13.webp",
+        "name": "BỘ VÌ SAO? NHƯ THẾ NÀO? (CUỐN LẺ)",
+        "ogPrice": "99.000",
+        "discountPrice": "79.200",
+        "percentage": "-20%"
+      },
+      {
+        "id": 6,
+        "image": "/assets/img/book-14.webp",
+        "name": "90-20-30 90 BÀI HỌC VỠ LÒNG VỀ Ý TƯỞNG VÀ CÂU CHỮ (BẢN ĐEN TRẮNG) - TÁI BẢN",
+        "ogPrice": "195.000",
+        "discountPrice": "175.500",
+        "percentage": "-10%"
+      },
+      {
+        "id": 7,
+        "image": "/assets/img/book-15.webp",
+        "name": "BÍ QUYẾT HỘI HỌA - KÝ HỌA CHÂN DUNG",
+        "ogPrice": "70.000",
+        "discountPrice": "63.000",
+        "percentage": "-10%"
+      },
+      {
+        "id": 8,
+        "image": "/assets/img/book-16.webp",
+        "name": "STORYTELLING WITH DATA - KỂ CHUYỆN THÔNG QUA DỮ LIỆU",
+        "ogPrice": "319.000",
+        "discountPrice": "287.100",
+        "percentage": "-10%"
+      }
+    ],
+    "bestSellers": [
+      {
+        "image": "/assets/img/bs-6.jpg",
+        "name": "ĐẮC NHÂN TÂM - DALE CARNEGIE (BÌA MỀM)",
+        "ogPrice": "86.000",
+        "discountPrice": "75.680",
+        "percentage": "-12%",
+        "comment": "(8 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-7.jpg",
+        "name": "KHÉO ĂN NÓI SẼ CÓ ĐƯỢC THIÊN HẠ - BÌA MỀM",
+        "ogPrice": "130.000",
+        "discountPrice": "91.000",
+        "percentage": "-30%",
+        "comment": "(1 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-8.jpg",
+        "name": "BẠN KHÔNG THÔNG MINH LẮM ĐÂU",
+        "ogPrice": "139.000",
+        "discountPrice": "118.150",
+        "percentage": "-15%",
+        "comment": "(2 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-9.gif",
+        "name": "NGƯỜI NAM CHÂM - BÍ MẬT CỦA LUẬT HẤP DẪN",
+        "ogPrice": "79.000",
+        "discountPrice": "67.150",
+        "percentage": "-15%",
+        "comment": "(1 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-10.jpg",
+        "name": "999 LÁ THƯ GỬI CHO CHÍNH MÌNH TẬP 1 - MONG BẠN TRỞ THÀNH PHIÊN BẢN HOÀN HẢO NHẤT",
+        "ogPrice": "129.000",
+        "discountPrice": "109.650",
+        "percentage": "-15%",
+        "comment": "",
+        "star": 0
+      }
+    ]
+  },
+  {
+    "ads": "/assets/img/ads-1.png",
+    "type": "SÁCH LUYỆN THI ĐẠI HỌC",
+    "bookAds": "/assets/img/book-ads-1.jpg",
+    "books": [
+      {
+        "id": 9,
+        "image": "/assets/img/book-1.jpg",
+        "name": "BÍ KÍP LÀM BÀI THI TRẮC NGHIỆM MÔN TIẾNG ANH THPT QUỐC GIA",
+        "ogPrice": "249.000",
+        "discountPrice": "199.200",
+        "percentage": "-20%"
+      },
+      {
+        "id": 10,
+        "image": "/assets/img/book-2.jpg",
+        "name": "BỘ ĐỀ TUYỂN CHỌN ÔN THI TỐT NGHIỆP THPT - MÔN NGỮ VĂN 2023",
+        "ogPrice": "65.000",
+        "discountPrice": "53.950",
+        "percentage": "-17%"
+      },
+      {
+        "id": 11,
+        "image": "/assets/img/book-3.jpg",
+        "name": "BỘ ĐỀ TUYỂN CHỌN ÔN THI TỐT NGHIỆP THPT - MÔN TOÁN 2023",
+        "ogPrice": "65.000",
+        "discountPrice": "53.950",
+        "percentage": "-17%"
+      },
+      {
+        "id": 12,
+        "image": "/assets/img/book-4.jpg",
+        "name": "BỘ ĐỀ TUYỂN CHỌN ÔN THI TỐT NGHIỆP THPT - MÔN TIẾNG ANH 2023",
+        "ogPrice": "65.000",
+        "discountPrice": "53.950",
+        "percentage": "-17%"
+      },
+      {
+        "id": 13,
+        "image": "/assets/img/book-5.jpg",
+        "name": "CÁCH DÙNG CÁC THÌ TIẾNG ANH VÀ ĐỘNG TỪ BẤT QUY TẮC (ABB)",
+        "ogPrice": "20.000",
+        "discountPrice": "17.000",
+        "percentage": "-15%"
+      },
+      {
+        "id": 14,
+        "image": "/assets/img/book-6.jpg",
+        "name": "COMBO DẠNG ĐỀ CẢM NHẬN ĐOẠN TRÍCH THƠ VÀ VĂN XUÔI NGỮ VĂN 12 + CẨM NANG LUYỆN THI QUỐC GIA NGỮ VĂN (BỘ 3 CUỐN)",
+        "ogPrice": "505.000",
+        "discountPrice": "419.150",
+        "percentage": "-17%"
+      },
+      {
+        "id": 15,
+        "image": "/assets/img/book-7.jpg",
+        "name": "COMBO DẠNG ĐỀ CẢM NHẬN ĐOẠN TRÍCH THƠ VÀ VĂN XUÔI NGỮ VĂN 12 (BỘ 2 CUỐN)",
+        "ogPrice": "316.000",
+        "discountPrice": "262.280",
+        "percentage": "-17%"
+      },
+      {
+        "id": 16,
+        "image": "/assets/img/book-8.jpg",
+        "name": "COMBO TRẮC NGHIỆM CHUYÊN ĐỀ GIẢI TÍCH VÀ HÌNH HỌC 12 + TỜ CÔNG THỨC TOÁN 12",
+        "ogPrice": "315.000",
+        "discountPrice": "252.000",
+        "percentage": "-20%"
+      }
+    ],
+    "bestSellers": [
+      {
+        "image": "/assets/img/bs-1.gif",
+        "name": "BỒI DƯỠNG HỌC SINH GIỎI QUA CÁC KÌ THI CHUYÊN ĐỀ LÍ LUẬN VĂN HỌC",
+        "ogPrice": "124.000",
+        "discountPrice": "102.920",
+        "percentage": "-17%",
+        "comment": "(8 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-2.jpg",
+        "name": "BỒI DƯỠNG HỌC SINH GIỎI QUA CÁC KÌ THI CHUYÊN ĐỀ NGHỊ LUẬN XÃ HỘI THEO HƯỚNG MỞ",
+        "ogPrice": "124.000",
+        "discountPrice": "102.920",
+        "percentage": "-17%",
+        "comment": "(1 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-3.jpg",
+        "name": "GIÚP TRÍ NHỚ CHUỖI PHẢN ỨNG HÓA HỌC",
+        "ogPrice": "38.000",
+        "discountPrice": "34.200",
+        "percentage": "-10%",
+        "comment": "(2 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-4.jpg",
+        "name": "CÂU HỎI TRẮC NGHIỆM CHUYÊN ĐỀ TỪ VỰNG TIẾNG ANH",
+        "ogPrice": "120.000",
+        "discountPrice": "96.000",
+        "percentage": "-20%",
+        "comment": "(1 nhận xét)",
+        "star": 5
+      },
+      {
+        "image": "/assets/img/bs-5.jpg",
+        "name": "CÂU HỎI TRẮC NGHIỆM CHUYÊN ĐỀ KỸ NĂNG ĐỌC HIỂU TIẾNG ANH",
+        "ogPrice": "115.000",
+        "discountPrice": "93.150",
+        "percentage": "-19%",
+        "comment": "",
+        "star": 0
+      }
+    ]
+  }
+]
